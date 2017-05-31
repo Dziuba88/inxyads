@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  $(".bar.success").peity("bar", {fill: ['#006064'], width: 64, height: 32,});
-  $(".bar.danger").peity("bar", {fill: ['#c62828'], width: 64, height: 32,});
+  $(".bar.success").peity("bar", {fill: ['#006064'], width: 80, height: 60,});
+  $(".bar.danger").peity("bar", {fill: ['#c62828'], width: 80, height: 60,});
   $(".line").peity("line", {fill: ["#ff9900"], stroke: ["#00ff99"]});
   $('.donut').peity('donut', {fill: ["#ff9900", "#00ff99"]});
 
@@ -14,7 +14,6 @@ $(document).ready(function() {
 					"marginTop": 10,
 					"plotAreaBorderColor": "#888888",
 					"colors": ["#67b7dc","#006064","#006064","#006064","#006064","#006064","#006064","#006064","#006064","#006064","#006064"],
-					"startDuration": 1,
 					"borderColor": "#888888",
 					"color": "#006064",
 					"fontSize": 10,
@@ -100,7 +99,6 @@ $(document).ready(function() {
 
 
   AmCharts.makeChart("chartdiv2", {
-					"startDuration": 1,
     "type": "serial",
     "theme": "light",
     "dataDateFormat": "YYYY-MM-DD",
