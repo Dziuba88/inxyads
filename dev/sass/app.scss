@@ -1,0 +1,31 @@
+//== Core variables and mixins
+@import "app_includes/mixins";
+@import "app_includes/variables";
+//== Reset and dependencies
+@import "app_includes/normalize";
+/*! CORE CSS */
+@import "app_includes/scaffolding";
+//@import "app_includes/main";
+@import "app_includes/grid";
+@import "app_includes/typography";
+
+//== Material UI Colors
+@import "app_includes/colors";
+//== Font Awesome 4.7.0
+@import "font_awesome/font-awesome";
+
+//== COMPONENTS
+@import "app_includes/preloader";
+@import "app_includes/navs";
+@import "app_includes/navbar";
+@import "app_includes/dropdowns";
+@import "app_includes/re_tabs";
+@import "app_includes/breadcrumbs";
+@import "app_includes/panels";
+@import "app_includes/daterangepicker";
+@import "app_includes/responsive-tables";
+@import "app_includes/switches";
+@import "app_includes/tooltips";
+@import "app_includes/labels";
+//== LAYOUTS
+@import "layouts/dashboard";

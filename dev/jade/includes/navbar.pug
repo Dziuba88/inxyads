@@ -1,0 +1,40 @@
+nav.navbar
+  .navbar-header
+    a.navbar-brand(href='dashboard.html'): svg: use(xlink:href="#inxy_logo")
+    svg.navbar-toggle(type='button'): use(xlink:href="#menu_icon")
+  .navbar-collapse
+    ul.nav.navbar-nav
+      li.current: a(href='dashboard.html') Dashboard
+      li: a(href='#') Рекламные кампании
+      li: a(href='#') Площадки
+    ul.nav.navbar-nav.right
+      li.icons-menu
+        a(href="").news
+          i.fa.fa-bullhorn 
+          sup 3
+        a(href="").messages
+          i.fa.fa-comments-o 
+          sup 5
+      li.dropdown.user-finances
+        a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+          span Balance  
+          i.fa.fa-usd  
+          span 122.3
+          span.caret
+        ul.dropdown-menu
+          li: a(href='#') <i class="fa fa-plus-square"></i> Пополнить
+          li: a(href='#') <i class="fa fa-minus-square"></i> Вывести
+      li.dropdown.user-menu
+        a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+          span.user-menu__pic: img(src="https://unsplash.it/100?image=1005", alt="")
+          span.user-menu__name Lorem Ipsum
+          span.caret
+        ul.dropdown-menu
+          li: a(href='#') <i class="fa fa-user"></i> Профиль
+          li: a(href='#') <i class="fa fa-id-card"></i> Документы
+          li: a(href='#') <i class="fa fa-sign-out"></i> Выход
+      li.lang-menu
+        a(href="")
+          svg: use(xlink:href="#flag_UK")
+          span.small-only English
+  // /.navbar-collapse
