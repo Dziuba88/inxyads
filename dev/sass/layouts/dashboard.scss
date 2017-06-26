@@ -61,32 +61,28 @@
       display: block;
       padding: 0 ($gutter-width / 2 / 4);
       position: relative;
-      z-index: 1;
-      transition: .15s ease-in-out;
 
       &:last-child {
         flex:1;
         text-align: right;
       }
 
-      &:hover {
-        z-index: 2;
-      }
 
 
       a {
-        transition: .15s ease-in-out;
+        transition: .25s ease-in-out;
         display: block;
         background-color: rgba(0,0,0,0);
         padding: .5em .75em;
         border-radius: 3px;
-        transform: scale(1);
+        transform: scale(.85);
+        transform-origin: center center;
         @include shadow(0 2px 5px rgba(0,0,0,0));
 
         &:hover {
           background-color: $primary-color;
           color: #fff;
-          transform: scale(1.2);
+          transform: scale(1);
           @include shadow(0 2px 5px rgba(0,0,0,.12));
         }
       }
