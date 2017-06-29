@@ -9,7 +9,7 @@
   top: 0;
   z-index: 1000;
   transition: .75s ease-in-out;
-  background-color: $navbar-background;
+  background-color: #fff;
   height: $navbar-height;
   font-size: $navbar-font;
   line-height: $navbar-line-height;
@@ -75,26 +75,20 @@
 
 // Brand/project name
 .navbar-brand {
-  color: $primary-color;
-  line-height: $navbar-line-height;
   padding: 15px 20px;
   display: block;
   user-select: none;
   margin-right: 40px;
 
-  svg {
+  img {
     display: block;
     height: 20px;
-    width: 125px;
+    width: auto;
+    transition: .15s linear;
   }
 
-  img {
-    height: 30px;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: rgba(0,0,0,.25);
+  &:hover img {
+    transform: scale(.9)
   }
 }
 
@@ -144,13 +138,13 @@ svg.navbar-toggle {
     > a {
       display: block;
       padding: 10px 15px;
-      color: #fff;
+      color: $primary-color;
       cursor: pointer;
       user-select: none;
 
       &:hover {
         color: #fff;
-        background-color: rgba(0,0,0,.25);
+        background-color: $secondary-color;
       }
 
     }
@@ -163,12 +157,12 @@ svg.navbar-toggle {
       }
 
       > .dropdown-menu {
-        background-color: #111;
+        background-color: #fff;
         border-radius: 0 0 3px 3px;
 
         li a {
-          color: #fff;
-          &:hover {color: #ccc;}
+          color: $secondary-color;
+          &:hover {color: $primary-color;}
 
           .fa {
             opacity: .75;
@@ -183,8 +177,8 @@ svg.navbar-toggle {
 
     &.current, &.open {
       > a {
-        color: #ccc;
-        background-color: #111;
+        color: #fff;
+        background-color: $secondary-color;
       }
     }
   

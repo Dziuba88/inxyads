@@ -30,8 +30,10 @@ $gutter-width: 20px !default;
 
 //== Colors
 $base-color:        color($grey, '900') !default;
-$primary-color:     color($light-green, '700') !default;
-$secondary-color:   color($cyan, '900') !default;
+$primary-color:     #90459d !default;
+$secondary-color:   #9b78b4 !default;
+$thrid-color:       #f1924d !default;
+$accent-color:       #ed6981 !default;
 $danger-color:   color($red, '700') !default;
 
 //== Effects

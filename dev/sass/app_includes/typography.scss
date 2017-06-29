@@ -100,7 +100,7 @@ body {
 }
 
 .content-header {
-	background-color: $secondary-color;
+	background-color: rgba($primary-color, .5);
 	color: #fff;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -273,7 +273,7 @@ a {
 	line-height: 1;
 	text-align: center;
 	padding: $gutter-width 0;
-	background-color: color($blue-grey, '500');
+	background-color: $secondary-color;
 	color: rgba(#fff, .5);
 	@include shadow(inset 0 2px 3px 0 rgba(0, 0, 0, 0.25));
 

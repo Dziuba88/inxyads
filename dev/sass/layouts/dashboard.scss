@@ -70,6 +70,7 @@
 
 
       a {
+        color: $primary-color;
         transition: .25s ease-in-out;
         display: block;
         background-color: rgba(0,0,0,0);
@@ -80,7 +81,7 @@
         @include shadow(0 2px 5px rgba(0,0,0,0));
 
         &:hover {
-          background-color: $primary-color;
+          background-color: $accent-color;
           color: #fff;
           transform: scale(1);
           @include shadow(0 2px 5px rgba(0,0,0,.12));
