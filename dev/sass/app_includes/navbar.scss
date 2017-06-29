@@ -138,13 +138,13 @@ svg.navbar-toggle {
     > a {
       display: block;
       padding: 10px 15px;
-      color: $primary-color;
+      color: $base-color;
       cursor: pointer;
       user-select: none;
 
       &:hover {
         color: #fff;
-        background-color: $secondary-color;
+        background-color: $base-color;
       }
 
     }
@@ -161,7 +161,7 @@ svg.navbar-toggle {
         border-radius: 0 0 3px 3px;
 
         li a {
-          color: $secondary-color;
+          color: $base-color;
           &:hover {color: $primary-color;}
 
           .fa {
@@ -178,7 +178,7 @@ svg.navbar-toggle {
     &.current, &.open {
       > a {
         color: #fff;
-        background-color: $secondary-color;
+        background-color: $base-color;
       }
     }
   
