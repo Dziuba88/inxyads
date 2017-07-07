@@ -100,7 +100,7 @@ body {
 }
 
 .content-header {
-	background-color: $secondary-color;
+	background: $secondary-color url(../img/header.jpg) no-repeat center center / cover;
 	color: #fff;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -110,12 +110,14 @@ body {
 	align-items: baseline;
 
 	h1 {
+		font-size: 24px;
 		flex: 1;
 		margin: 0;
-		font-weight: 100;
+		font-weight: 600;
 		text-transform: uppercase;
 		
 		small {
+			display: none;
 			font-size: .5em;
 			opacity: .5;
 		}
@@ -249,7 +251,8 @@ a {
 	@extend .transition;
 	text-decoration: none;
 	color: $primary-color;
-	&:hover {color: $secondary-color;}
+
+	&:hover {color: $accent-color;}
 }
 
 

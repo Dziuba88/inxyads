@@ -5,12 +5,16 @@
     @include shadow($shadow-z-1);
 
     &-heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       border-bottom: 1px solid rgba(0,0,0,.12);
       padding: ($gutter-width / 2) $gutter-width;
       
       h3 {
         display: flex;
         align-items: center;
+
         margin: 0;
         text-transform: uppercase;
         opacity: .75;
@@ -22,4 +26,50 @@
     &-body {
       padding: ($gutter-width / 2) $gutter-width;
     }
+
+    .dropdown {
+      margin: 0;
+      padding: .5em;
+
+      &-toggle {
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        fill:$primary-color;
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 1.25em;
+        height: 1.25em;
+
+        &:hover {
+          fill:$secondary-color;
+        }
+      }
+
+      &-menu {
+        z-index: 1;
+        top: 0;
+        right: 0;
+        left: auto;
+        margin: 0;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        min-width: 140px;
+
+        li a {
+          font-size: 12px;
+          line-height: 24px;
+          display: block;
+          color: $primary-color;
+
+          &:hover {
+            color: $accent-color;
+          }
+
+        }
+      }
+    }
+
+
 }

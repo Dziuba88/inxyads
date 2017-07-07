@@ -52,6 +52,14 @@ html(lang="en")
                   h3 показов: 
                     span 345 332 
                     small.success +12 032
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
                 .panel-body
                   #chartdiv1(style="width: 100%; height: 200px; background-color: #FFFFFF;")
             .col.md-4.lg-5
@@ -60,12 +68,28 @@ html(lang="en")
                   h3 переходов: 
                     span 345 332 
                     small.danger -12 032
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
                 .panel-body
                   #chartdiv2(style="width: 100%; height: 200px; background-color: #FFFFFF;")
             .col.md-3.lg-2
-              .stats-panel
+              .panel.stats-panel
                 .panel-heading
                   h3 статистика
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
                 .stats
                   .stats-body
                     .stats-title CTR
