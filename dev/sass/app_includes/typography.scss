@@ -100,7 +100,7 @@ body {
 }
 
 .content-header {
-	background: $secondary-color url(../img/header.jpg) no-repeat center center / cover;
+	background: $secondary-color url(../img/header.jpg) no-repeat left center / cover;
 	color: #fff;
 	padding: 20px;
 	margin-bottom: 20px;
@@ -150,6 +150,7 @@ body {
 
 		h1 {
 			width: 100%;
+			margin-bottom: 10px;
 			small {display: block;margin-bottom: 20px;}
 		}
 	}
