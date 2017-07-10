@@ -101,7 +101,7 @@
 svg.navbar-toggle {
   padding: 0;
   background: none;
-  fill: #fff;
+  fill: $primary-color;
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -109,7 +109,7 @@ svg.navbar-toggle {
   transition: .25s ease-in-out;
 
   &:hover, &.active {
-    fill: $primary-color;
+    fill: $secondary-color;
   }
   
 
