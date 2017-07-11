@@ -1,0 +1,156 @@
+- site_title = "InxyADS";
+- active__menu = 'Площадки';
+- page_title = 'Площадки';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+      .container
+        h2.filters-header Статистика 
+          small за всё время
+          .dropdown
+            svg.dropdown-mobile(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#menu_icon")
+            ul.dropdown-menu(aria-labelledby='dLabel')
+              li.active: a(href="#", title="Всё время") Всё время
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Вчера") Вчера
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Неделя") Неделя
+              li: a(href="#", title="Месяц") Месяц
+              li: a(href="#", title="Квартал") Квартал
+              li: a(href="#", title="Год") Год
+        .filters
+          ul.filters-nav
+            li.active: a(href="#", title="Всё время") Всё время
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Вчера") Вчера
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Неделя") Неделя
+            li: a(href="#", title="Месяц") Месяц
+            li: a(href="#", title="Квартал") Квартал
+            li: a(href="#", title="Год") Год
+            li
+              form.filters-custom(action="")
+                input(type="text" id="daterange")
+                i.fa.fa-calendar
+          
+          .row.stretch
+            .col.md-4
+              .panel
+                .panel-heading
+                  h3 показов: 
+                    span 345 332 
+                    small.success +12 032
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
+                .panel-body
+                  #chartdiv1(style="width: 100%; height: 200px; background-color: #FFFFFF;")
+            .col.md-4
+              .panel
+                .panel-heading
+                  h3 переходов: 
+                    span 345 332 
+                    small.danger -12 032
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
+                .panel-body
+                  #chartdiv2(style="width: 100%; height: 200px; background-color: #FFFFFF;")
+            .col.md-4
+              .panel
+                .panel-heading
+                  h3 показов: 
+                    span 345 332 
+                    small.success +12 032
+                  .dropdown
+                    svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#edit_icon")
+                    ul.dropdown-menu(aria-labelledby='dLabel')
+                      li.active: a(href="#", title="Всё время") Всё время
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Вчера") Вчера
+                      li: a(href="#", title="Сегодня") Сегодня
+                      li: a(href="#", title="Неделя") Неделя
+                .panel-body
+                  #chartdiv3(style="width: 100%; height: 200px; background-color: #FFFFFF;")
+
+      .container
+        .row.content-subheader
+          .col.sm-8
+            h2 #{page_title}
+              .dropdown
+                svg.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#menu_icon")
+                ul.dropdown-menu(aria-labelledby='dLabel')
+                  li.active: a(href="#", title="Всё время") Всё время
+                  li: a(href="#", title="Сегодня") Сегодня
+                  li: a(href="#", title="Вчера") Вчера
+                  li: a(href="#", title="Сегодня") Сегодня
+                  li: a(href="#", title="Неделя") Неделя
+                  li: a(href="#", title="Месяц") Месяц
+                  li: a(href="#", title="Квартал") Квартал
+                  li: a(href="#", title="Год") Год
+          .col.sm-4.text-right
+            a(href="compain-new.html").btn-submit 
+              i.fa.fa-cart-plus 
+              span Добавить площадку
+        .responsive-vertical: table.material-table.hover.bordered.striped.publisher-table
+          thead
+            tr
+              th Сайт
+              th Статус  
+              th Таргетинг  
+              th Доход  
+              th Показы  
+              th Клики  
+              th Редактировать 
+          tbody
+            - for (var x = 1; x < 20; x++)
+              tr
+                td(data-title='Сайт')
+                  span.company__title ilye баннеры
+                    small http://inxyads.com
+                td(data-title='Статус')
+                  span.status__success Активный
+                td(data-title='Таргетинг')
+                  span Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры 
+                td(data-title='Доход')
+                  strong 12,6 $ 
+                td(data-title='Показы')
+                  span.company__impressions= 34555 * x
+                td(data-title='Клики')
+                  span.company__clicks= 417 + x
+                td(data-title=' ')
+                  a(href="compain-edit.html", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

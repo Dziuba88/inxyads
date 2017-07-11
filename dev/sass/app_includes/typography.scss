@@ -69,11 +69,6 @@
 @media #{$large-up} {
   @include typography($lg-font_size);
 }
-@if $xl-screen-asset == true {
-	@media #{$xlarge-screen} {
-		@include typography($xl-font_size);
-	}
-}
 
 
 /* ------ Base styles ------ */

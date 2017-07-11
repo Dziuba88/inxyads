@@ -104,6 +104,100 @@ $(document).ready(function() {
 			);
 
 
+			AmCharts.makeChart("chartdiv3",{
+					"type": "serial",
+					"categoryField": "date",
+					"dataDateFormat": "YYYY",
+					"marginBottom": 5,
+					"marginLeft": 10,
+					"marginRight": 10,
+					"marginTop": 10,
+					"plotAreaBorderColor": "#888888",
+					"colors": ["#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4","#9b78b4"],
+					"borderColor": "#888888",
+					"color": "#9b78b4",
+					"fontSize": 10,
+					"theme": "light",
+					"categoryAxis": {
+						"minPeriod": "YYYY",
+						"parseDates": true
+					},
+					"chartCursor": {
+						"enabled": true,
+						"animationDuration": 0,
+						"categoryBalloonDateFormat": "YYYY"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"bullet": "round",
+							"fillAlphas": 0.31,
+							"id": "AmGraph-1",
+							"title": "graph 1",
+							"type": "smoothedLine",
+							"valueField": "column-1"
+						},
+						{
+							"bullet": "square",
+							"fillAlphas": 0.35,
+							"fontSize": -2,
+							"id": "AmGraph-2",
+							"title": "graph 2",
+							"type": "smoothedLine",
+							"valueField": "column-2"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"title": ""
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"titles": [],
+					"dataProvider": [
+						{
+							"date": "2001",
+							"column-1": 8,
+							"column-2": 5
+						},
+						{
+							"date": "2002",
+							"column-1": 6,
+							"column-2": 7
+						},
+						{
+							"date": "2003",
+							"column-1": 2,
+							"column-2": 3
+						},
+						{
+							"date": "2004",
+							"column-1": 4,
+							"column-2": 3
+						},
+						{
+							"date": "2005",
+							"column-1": 2,
+							"column-2": 1
+						},
+						{
+							"date": "2006",
+							"column-1": 3,
+							"column-2": 2
+						},
+						{
+							"date": "2007",
+							"column-1": 4,
+							"column-2": 8
+						}
+					]
+				}
+			);
+
+
   AmCharts.makeChart("chartdiv2", {
     "type": "serial",
     "theme": "light",

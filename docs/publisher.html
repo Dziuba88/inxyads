@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InxyADS | Площадки</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body class="loading">
+    <div class="inxy-preloader">
+      <div class="inxy-preloader__circle"></div>
+    </div>
+    <nav class="navbar">
+      <div class="navbar-header"><a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="InxyADS"></a>
+        <svg class="navbar-toggle" type="button">
+          <use xlink:href="#menu_icon"></use>
+        </svg>
+      </div>
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav">
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="compaings.html">Рекламные кампании</a></li>
+              <li class="current"><a href="publisher.html">Площадки</a></li>
+        </ul>
+        <ul class="nav navbar-nav right">
+          <li class="icons-menu"><a class="news" href=""><i class="fa fa-bullhorn"> </i><sup>3</sup></a><a class="messages" href=""><i class="fa fa-comments-o"> </i><sup>5</sup></a></li>
+          <li class="dropdown user-finances"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Balance  </span><i class="fa fa-usd"> </i><span>122.3</span><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-plus-square"></i> Пополнить</a></li>
+              <li><a href="#"><i class="fa fa-minus-square"></i> Вывести</a></li>
+            </ul>
+          </li>
+          <li class="dropdown user-menu"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="user-menu__pic"><img src="https://unsplash.it/100?image=1005" alt=""></span><span class="user-menu__name">Lorem Ipsum</span><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fa fa-user"></i> Профиль</a></li>
+              <li><a href="#"><i class="fa fa-id-card"></i> Документы</a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i> Выход</a></li>
+            </ul>
+          </li>
+          <li class="lang-menu"><a href="">
+              <svg>
+                <use xlink:href="#flag_UK"></use>
+              </svg><span class="small-only">English</span></a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse-->
+    </nav>
+    <div class="inxy-page layout-dashboard">
+      <section class="content-header">
+        <h1>Площадки</h1>
+        <ul class="breadcrumb">
+          <li><a href=""><i class="fa fa-home"> </i>Dashboard </a></li>
+          <li><span>Площадки</span></li>
+        </ul>
+      </section>
+      <div class="container">
+        <h2 class="filters-header">Статистика <small>за всё время</small>
+          <div class="dropdown">
+            <svg class="dropdown-mobile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <use xlink:href="#menu_icon"></use>
+            </svg>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+              <li><a href="#" title="Сегодня">Сегодня</a></li>
+              <li><a href="#" title="Вчера">Вчера</a></li>
+              <li><a href="#" title="Сегодня">Сегодня</a></li>
+              <li><a href="#" title="Неделя">Неделя</a></li>
+              <li><a href="#" title="Месяц">Месяц</a></li>
+              <li><a href="#" title="Квартал">Квартал</a></li>
+              <li><a href="#" title="Год">Год</a></li>
+            </ul>
+          </div>
+        </h2>
+        <div class="filters">
+          <ul class="filters-nav">
+            <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+            <li><a href="#" title="Сегодня">Сегодня</a></li>
+            <li><a href="#" title="Вчера">Вчера</a></li>
+            <li><a href="#" title="Сегодня">Сегодня</a></li>
+            <li><a href="#" title="Неделя">Неделя</a></li>
+            <li><a href="#" title="Месяц">Месяц</a></li>
+            <li><a href="#" title="Квартал">Квартал</a></li>
+            <li><a href="#" title="Год">Год</a></li>
+            <li>
+              <form class="filters-custom" action="">
+                <input type="text" id="daterange"><i class="fa fa-calendar"></i>
+              </form>
+            </li>
+          </ul>
+          <div class="row stretch">
+            <div class="col md-4">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h3>показов: <span>345 332 </span><small class="success">+12 032</small></h3>
+                  <div class="dropdown">
+                    <svg class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <use xlink:href="#edit_icon"></use>
+                    </svg>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Вчера">Вчера</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Неделя">Неделя</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div id="chartdiv1" style="width: 100%; height: 200px; background-color: #FFFFFF;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col md-4">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h3>переходов: <span>345 332 </span><small class="danger">-12 032</small></h3>
+                  <div class="dropdown">
+                    <svg class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <use xlink:href="#edit_icon"></use>
+                    </svg>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Вчера">Вчера</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Неделя">Неделя</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div id="chartdiv2" style="width: 100%; height: 200px; background-color: #FFFFFF;"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col md-4">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h3>показов: <span>345 332 </span><small class="success">+12 032</small></h3>
+                  <div class="dropdown">
+                    <svg class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <use xlink:href="#edit_icon"></use>
+                    </svg>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                      <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Вчера">Вчера</a></li>
+                      <li><a href="#" title="Сегодня">Сегодня</a></li>
+                      <li><a href="#" title="Неделя">Неделя</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <div id="chartdiv3" style="width: 100%; height: 200px; background-color: #FFFFFF;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row content-subheader">
+          <div class="col sm-8">
+            <h2>Площадки
+              <div class="dropdown">
+                <svg class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <use xlink:href="#menu_icon"></use>
+                </svg>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+                  <li><a href="#" title="Сегодня">Сегодня</a></li>
+                  <li><a href="#" title="Вчера">Вчера</a></li>
+                  <li><a href="#" title="Сегодня">Сегодня</a></li>
+                  <li><a href="#" title="Неделя">Неделя</a></li>
+                  <li><a href="#" title="Месяц">Месяц</a></li>
+                  <li><a href="#" title="Квартал">Квартал</a></li>
+                  <li><a href="#" title="Год">Год</a></li>
+                </ul>
+              </div>
+            </h2>
+          </div>
+          <div class="col sm-4 text-right"><a class="btn-submit" href="compain-new.html"> <i class="fa fa-cart-plus"> </i><span>Добавить площадку</span></a></div>
+        </div>
+        <div class="responsive-vertical">
+          <table class="material-table hover bordered striped publisher-table">
+            <thead>
+              <tr>
+                <th>Сайт</th>
+                <th>Статус  </th>
+                <th>Таргетинг  </th>
+                <th>Доход  </th>
+                <th>Показы  </th>
+                <th>Клики  </th>
+                <th>Редактировать </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">34555</span></td>
+                <td data-title="Клики"><span class="company__clicks">418</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">69110</span></td>
+                <td data-title="Клики"><span class="company__clicks">419</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">103665</span></td>
+                <td data-title="Клики"><span class="company__clicks">420</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">138220</span></td>
+                <td data-title="Клики"><span class="company__clicks">421</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">172775</span></td>
+                <td data-title="Клики"><span class="company__clicks">422</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">207330</span></td>
+                <td data-title="Клики"><span class="company__clicks">423</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">241885</span></td>
+                <td data-title="Клики"><span class="company__clicks">424</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">276440</span></td>
+                <td data-title="Клики"><span class="company__clicks">425</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">310995</span></td>
+                <td data-title="Клики"><span class="company__clicks">426</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">345550</span></td>
+                <td data-title="Клики"><span class="company__clicks">427</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">380105</span></td>
+                <td data-title="Клики"><span class="company__clicks">428</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">414660</span></td>
+                <td data-title="Клики"><span class="company__clicks">429</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">449215</span></td>
+                <td data-title="Клики"><span class="company__clicks">430</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">483770</span></td>
+                <td data-title="Клики"><span class="company__clicks">431</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">518325</span></td>
+                <td data-title="Клики"><span class="company__clicks">432</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">552880</span></td>
+                <td data-title="Клики"><span class="company__clicks">433</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">587435</span></td>
+                <td data-title="Клики"><span class="company__clicks">434</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">621990</span></td>
+                <td data-title="Клики"><span class="company__clicks">435</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+              <tr>
+                <td data-title="Сайт"><span class="company__title">ilye баннеры<small>http://inxyads.com</small></span></td>
+                <td data-title="Статус"><span class="status__success">Активный</span></td>
+                <td data-title="Таргетинг"><span>Кредиты/Займы/Ипотека, Албания,<br>все системы, все браузеры </span></td>
+                <td data-title="Доход"><strong>12,6 $ </strong></td>
+                <td data-title="Показы"><span class="company__impressions">656545</span></td>
+                <td data-title="Клики"><span class="company__clicks">436</span></td>
+                <td data-title=" "><a class="company__edit" href="compain-edit.html" title="edit">
+                    <svg>
+                      <use xlink:href="#edit_icon"></use>
+                    </svg></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer class="inxy__footer">
+      <div class="container"><span>© 2009–2017  </span><a href="#" title="INXY.COM">INXY.COM</a><span> All Rights Reserved.</span></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <!-- Page Plugins-->
+    <script src="js/plugins/amcharts/amcharts.js"></script>
+    <script src="js/plugins/amcharts/serial.js"></script>
+    <script src="js/plugins/amcharts/themes/light.js"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/datepicker/moment.min.js"></script>
+    <script src="js/plugins/datepicker/daterangepicker.js"></script>
+    <script src="js/layouts/dashboard.min.js"></script>
+  </body>
+</html>
