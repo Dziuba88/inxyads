@@ -1,6 +1,6 @@
 - site_title = "InxyADS";
 - active__menu = 'Рекламные кампании';
-- page_title = 'Редактировать кампанию';
+- page_title = 'Создать кампанию';
 doctype html
 html(lang="en")
   include includes/head
@@ -21,12 +21,12 @@ html(lang="en")
         form(action="" method="post").compain-edit
           .row
             .col.sm-8
-              h1 КАМПАНИЯ: CandyCrash на флеше
+              h1 #{page_title}
                 small Изменить статус
                   .switch
                     input.switch__ctrl(checked type='checkbox' id='status')
                     label.switch__lbl(for='status')
-            .col.sm-4.text-right
+            //.col.sm-4.text-right
               .well
                 .stats-graph <span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span>
                 span <strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек
@@ -36,10 +36,10 @@ html(lang="en")
               fieldset.compain-edit__main
                 .input-row.default
                   label(for="compain-name") Название кампании
-                  input(type="text" value="CandyCrash на флеше" required)#compain-name
+                  input(type="text" required)#compain-name
                 .input-row.default
                   label(for="compain-page") Рекламируем страницу
-                  input(type="text" value="http://inxyads.com/advertiser/statistics" required)#compain-page
+                  input(type="url" required)#compain-page
                 .input-row
                   label Траффик
                   span.checkbox.default

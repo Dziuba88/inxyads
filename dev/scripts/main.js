@@ -6,5 +6,6 @@
 //@prepros-append components/tab.js
 /*//@prepros-append components/tabs.js*/
 //@prepros-append components/responsive-table.js
+//@prepros-append components/waves.js
 
 

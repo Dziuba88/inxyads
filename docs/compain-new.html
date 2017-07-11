@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>InxyADS | Редактировать кампанию</title>
+    <title>InxyADS | Создать кампанию</title>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic">
     <link rel="stylesheet" href="css/app.min.css">
@@ -50,7 +50,7 @@
     </nav>
     <div class="inxy-page layout-dashboard">
       <section class="content-header">
-        <h1>Редактировать кампанию</h1>
+        <h1>Создать кампанию</h1>
         <ul class="breadcrumb">
           <li><a href=""><i class="fa fa-home"> </i>Dashboard </a></li>
           <li><span>Рекламные кампании</span></li>
@@ -60,28 +60,29 @@
         <form class="compain-edit" action="" method="post">
           <div class="row">
             <div class="col sm-8">
-              <h1>КАМПАНИЯ: CandyCrash на флеше<small>Изменить статус
+              <h1>Создать кампанию<small>Изменить статус
                   <div class="switch">
                     <input class="switch__ctrl" checked type="checkbox" id="status">
                     <label class="switch__lbl" for="status"></label>
                   </div></small></h1>
             </div>
-            <div class="col sm-4 text-right">
-              <div class="well">
-                <div class="stats-graph"><span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span></div><span><strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек</span>
-              </div>
-            </div>
+            <!--.col.sm-4.text-right
+            .well
+              .stats-graph <span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span>
+              span <strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек
+            
+            -->
           </div>
           <div class="row">
             <div class="col sm-6">
               <fieldset class="compain-edit__main">
                 <div class="input-row default">
                   <label for="compain-name">Название кампании</label>
-                  <input type="text" value="CandyCrash на флеше" required id="compain-name">
+                  <input type="text" required id="compain-name">
                 </div>
                 <div class="input-row default">
                   <label for="compain-page">Рекламируем страницу</label>
-                  <input type="text" value="http://inxyads.com/advertiser/statistics" required id="compain-page">
+                  <input type="url" required id="compain-page">
                 </div>
                 <div class="input-row">
                   <label>Траффик</label><span class="checkbox default">
