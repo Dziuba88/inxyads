@@ -4,7 +4,7 @@
 //@prepros-append components/dropdown.js
 //@prepros-append components/collapse.js
 //@prepros-append components/tab.js
-/*//@prepros-append components/re_tabs.js*/
+/*//@prepros-append components/tabs.js*/
 //@prepros-append components/responsive-table.js
 
 

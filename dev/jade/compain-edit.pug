@@ -1,0 +1,216 @@
+- site_title = "InxyADS";
+- active__menu = 'Рекламные кампании';
+- page_title = 'Редактировать кампанию';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+          
+      .container
+        form(action="" method="post").compain-edit
+          .row
+            .col.sm-8
+              h1 КАМПАНИЯ: CandyCrash на флеше
+                small Изменить статус
+                  .switch
+                    input.switch__ctrl(checked type='checkbox' id='status')
+                    label.switch__lbl(for='status')
+            .col.sm-4.text-right
+              .well
+                h4 Аудитория
+                p 2 334 площадок
+                p 1 280 000 человек
+
+          .row
+            .col.sm-6
+              fieldset.compain-edit__main
+                .input-row.default
+                  label(for="compain-name") Название кампании
+                  input(type="text" value="CandyCrash на флеше" required)#compain-name
+                .input-row.default
+                  label(for="compain-page") Рекламируем страницу
+                  input(type="text" value="http://inxyads.com/advertiser/statistics" required)#compain-page
+                .input-row
+                  label Траффик
+                  span.checkbox.default
+                    input(type="checkbox" checked)#chk1
+                    label(for="chk1") Компьютеры
+                  span.checkbox.default
+                    input(type="checkbox")#chk2
+                    label(for="chk2") Мобильные
+                .input-row
+                  label Формат
+                  span.radio.default
+                    input(type="radio" checked name="group1")#rad1
+                    label(for="rad1")
+                       span Баннеры 
+                       span.popover (?)
+                        span.popover-content
+                          a(href="compaings.html") 
+                            img(src="img/u662.png" alt="InxyADS")
+                            | Подробнее о баннерах
+                       span 120 площадок доступно
+                  span.radio.default
+                    input(type="radio" name="group1")#rad2
+                    label(for="rad2")
+                       span PopUnder 
+                       span.popover (?)
+                        span.popover-content
+                          a(href="compaings.html") 
+                            img(src="img/u662.png" alt="InxyADS")
+                            | Подробнее о PopUnder
+                       span 56 площадок доступно
+                  span.radio.default
+                    input(type="radio" name="group1")#rad3
+                    label(for="rad3")
+                       span PushUp 
+                       span.popover (?)
+                        span.popover-content
+                          a(href="compaings.html") 
+                            img(src="img/u662.png" alt="InxyADS")
+                            | Подробнее о PushUp
+                       span 120 площадок доступно
+                  span.radio.default
+                    input(type="radio" name="group1")#rad4
+                    label(for="rad4")
+                       span Branding  
+                       span.popover (?)
+                        span.popover-content
+                          a(href="compaings.html") 
+                            img(src="img/u662.png" alt="InxyADS")
+                            | Подробнее о Branding 
+                       span 120 площадок доступно
+            .col.sm-6
+              fieldset.compain-edit__payment
+                .input-row
+                  label Валюта
+                  ul.nav.nav-tabs
+                    li.active: a(href='#usd', role='tab', data-toggle='tab') USD
+                    li: a(href='#euro', role='tab', data-toggle='tab') EURO
+                  // Tab panes
+                  .tab-content
+                    #usd.tab-pane.active(role='tabpanel')
+                      .input-row
+                        label Модель оплаты
+                        ul.nav.nav-tabs
+                          li.active: a(href='#cpm_u', role='tab', data-toggle='tab') CPM
+                          li: a(href='#cpa_u', role='tab', data-toggle='tab') CPА
+                          li: a(href='#revshare_u', role='tab', data-toggle='tab') RevShare
+                        .tab-content
+                          #cpm_u.tab-pane.active(role='tabpanel')
+                            p Оплата за 1000 показов.
+                            .input-row.smallest
+                              label(for="cpm_u-cpm") CPM
+                              input(type="text" required)#cpm_u-cpm
+                              span.valute $
+                              span Рекомендуем 1,2 — 2,2 $
+                            .input-row.smallest
+                              label(for="day_u-cpm") Дневной лимит
+                              input(type="text" required)#day_u-cpm
+                              span.valute $
+                            .input-row.smallest
+                              label(for="lim_u-cpm") Общий лимит
+                              input(type="text" required)#lim_u-cpm
+                              span.valute $
+                          #cpa_u.tab-pane(role='tabpanel')
+                            p Оплата по кликам.<br>Наш менеджер предложит вам варианты.
+                            .input-row.smallest
+                              label(for="day_u-cpa") Дневной лимит
+                              input(type="text" required)#day_u-cpa
+                              span.valute $
+                            .input-row.smallest
+                              label(for="lim_u-cpa") Общий лимит
+                              input(type="text" required)#lim_u-cpa
+                              span.valute $
+                          #revshare_u.tab-pane(role='tabpanel')
+                            p Работаем за процент от рекламного бюджета.<br>Наш менеджер предложит вам варианты.
+                            .input-row.smallest
+                              label(for="day_u-rev") Дневной лимит
+                              input(type="text" required)#day_u-rev
+                              span.valute $
+                            .input-row.smallest
+                              label(for="lim_u-rev") Общий лимит
+                              input(type="text" required)#lim_u-rev
+                              span.valute $
+                    #euro.tab-pane(role='tabpanel')
+                      .input-row
+                        label Модель оплаты
+                        ul.nav.nav-tabs
+                          li.active: a(href='#cpm_e', role='tab', data-toggle='tab') CPM
+                          li: a(href='#cpa_e', role='tab', data-toggle='tab') CPА
+                          li: a(href='#revshare_e', role='tab', data-toggle='tab') RevShare
+                        .tab-content
+                          #cpm_e.tab-pane.active(role='tabpanel')
+                            p Оплата за 1000 показов.
+                            .input-row.smallest
+                              label(for="cpm_e-cpm") CPM
+                              input(type="text" required)#cpm_e-cpm
+                              span.valute €
+                              span Рекомендуем 1,2 — 2,2 $
+                            .input-row.smallest
+                              label(for="day_e-cpm") Дневной лимит
+                              input(type="text" required)#day_e-cpm
+                              span.valute €
+                            .input-row.smallest
+                              label(for="lim_e-cpm") Общий лимит
+                              input(type="text" required)#lim_e-cpm
+                              span.valute €
+                          #cpa_e.tab-pane(role='tabpanel')
+                            p Оплата по кликам.<br>Наш менеджер предложит вам варианты.
+                            .input-row.smallest
+                              label(for="day_e-cpa") Дневной лимит
+                              input(type="text" required)#day_e-cpa
+                              span.valute €
+                            .input-row.smallest
+                              label(for="lim_e-cpa") Общий лимит
+                              input(type="text" required)#lim_e-cpa
+                              span.valute €
+                          #revshare_e.tab-pane(role='tabpanel')
+                            p Работаем за процент от рекламного бюджета.<br>Наш менеджер предложит вам варианты.
+                            .input-row.smallest
+                              label(for="day_e-rev") Дневной лимит
+                              input(type="text" required)#day_e-rev
+                              span.valute €
+                            .input-row.smallest
+                              label(for="lim_e-rev") Общий лимит
+                              input(type="text" required)#lim_e-rev
+                              span.valute €
+          .compain-edit_controls
+            button.btn-delete 
+              i.fa.fa-trash-o
+              span Удалить кампанию
+            button(type="submit").btn-submit 
+              i.fa.fa-save 
+              span Сохранить
+
+
+
+
+
+
+
+
+
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

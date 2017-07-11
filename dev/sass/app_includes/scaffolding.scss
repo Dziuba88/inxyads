@@ -1,13 +1,10 @@
 //== Scaffolding
-* {
+*, *:before, *:after {
   @include box-sizing(border-box);
 	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
+  outline: none !important;
   
-}
-*:before,
-*:after {
-  @include box-sizing(border-box);
 }
 
 

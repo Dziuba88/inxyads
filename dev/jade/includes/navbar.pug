@@ -1,12 +1,14 @@
+mixin item(title, url)
+  li(class=active__menu == title ? 'current' : ''): a(href=url)= title
 nav.navbar
   .navbar-header
     a.navbar-brand(href='index.html'): img(src="img/logo.svg", alt="InxyADS")
     svg.navbar-toggle(type='button'): use(xlink:href="#menu_icon")
   .navbar-collapse
     ul.nav.navbar-nav
-      li.current: a(href='index.html') Dashboard
-      li: a(href='#') Рекламные кампании
-      li: a(href='#') Площадки
+      +item('Dashboard', 'index.html', '')
+      +item('Рекламные кампании', 'compaings.html', '')
+      +item('Площадки', 'publisher.html', '')
     ul.nav.navbar-nav.right
       li.icons-menu
         a(href="").news

@@ -1,4 +1,6 @@
-include includes/variables
+- site_title = "InxyADS";
+- active__menu = 'Dashboard';
+- page_title = 'Dashboard';
 doctype html
 html(lang="en")
   include includes/head
@@ -8,13 +10,11 @@ html(lang="en")
     include includes/navbar
     .inxy-page.layout-dashboard
       section.content-header
-        h1 Dashboard 
-          //small Control panel
+        h1=page_title
         ul.breadcrumb
           li: a(href="")
             i.fa.fa-home 
-            | Home 
-          li: span Dashboard
+            | Dashboard 
           
       .container
         h2.filters-header Статистика 
@@ -147,7 +147,7 @@ html(lang="en")
                 td(data-title='Клики')
                   span.company__clicks= 417 + x
                 td(data-title=' ')
-                  a(href="#", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
+                  a(href="compain-edit.html", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
             - for (var x = 6; x < 10; x++)
               tr
                 td(data-title='Статус')
@@ -172,7 +172,7 @@ html(lang="en")
                 td(data-title='Клики')
                   span.company__clicks —
                 td(data-title=' ')
-                  a(href="#", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
+                  a(href="compain-edit.html", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
             - for (var x = 11; x < 15; x++)
               tr
                 td(data-title='Статус')
@@ -197,7 +197,7 @@ html(lang="en")
                 td(data-title='Клики')
                   span.company__clicks= 417 + x
                 td(data-title=' ')
-                  a(href="#", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
+                  a(href="compain-edit.html", title="edit").company__edit: svg: use(xlink:href="#edit_icon")
 
       //
         h1 Heading Level 1

@@ -51,6 +51,9 @@
 	.breadcrumb {
 		font-size: $font-size;
 	}
+
+	.input-row input {font-size: $font-size;}
+
 }
 
 //start of mobile first breakpoints
@@ -284,4 +287,101 @@ a {
 	a {
 		color: #fff;
 	}
+}
+
+
+.popover {
+    display: inline;
+		color: $secondary-color;
+
+		&-content {
+			background-color: rgba(#fff, .9);
+			width: 240px;
+			bottom: 50%;
+			//left: auto;
+			//right: auto;
+			position: absolute;
+			z-index: 98;
+			@include shadow(0 3px 12px 0 rgba(0, 0, 0, 0.12));
+			text-align: center;
+			padding: 20px;
+			transition: $base-transition;
+			transform: scale(0);
+			opacity: 0;
+			border-radius: 8px;
+
+			img {
+				display: block;
+				max-width: 100%;
+				margin-bottom: 10px;
+			}
+			a {
+				text-transform: none;
+				display: block;
+			}
+		}
+
+		&:hover {
+			color: $accent-color;
+			.popover-content {
+				transition-delay: .25s;
+				transform: scale(1);
+				opacity: 1;
+				
+			}
+		}
+
+
+		/*&:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 220px;
+}*/
+}
+
+.text-right {text-align: right;}
+
+
+.btn-submit, .btn-delete {
+	display: inline-block;
+	height: 40px;
+	border: none;
+	padding: 0 20px;
+	text-transform: uppercase;
+	margin-left: 20px;
+	font-weight: 400;
+	border-radius: 3px;
+
+	.fa {
+		font-size: 1.5em;
+		margin: 0 .5em 0 0;
+		vertical-align: middle;
+	}
+	span {
+		vertical-align: middle;
+		display: inline-block;
+	}
+}
+
+.btn-submit {
+	color: #fff;
+	background-color: #7cb342;
+
+	&:hover {background-color: $secondary-color;}
+}
+
+.btn-delete {
+	color: $accent-color;
+	background-color: transparent;
+	padding: 0;
+
+	&:hover {color: $danger-color;}
 }

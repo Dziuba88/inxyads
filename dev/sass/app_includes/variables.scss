@@ -37,8 +37,8 @@ $accent-color:       #ed6981 !default;
 $danger-color:   color($red, '700') !default;
 
 //== Effects
-$shadow-z-1:        0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24) !default;
-$base-transition:   all .35s ease-in-out !default;
+$shadow-z-1:        0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 12px 0 rgba(0, 0, 0, 0.24) !default;
+$base-transition:   all .2s cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
 //== Typography
 $base-font:             'Roboto', sans-serif !default;
 $base-font_weight:      400 !default;
