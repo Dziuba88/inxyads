@@ -3,7 +3,7 @@ $(document).ready(function() {
     duration: 600,
     delay: 200
   });
-  Waves.attach('.btn-submit, .btn-delete, .nav-tabs li a, .filters-nav li a, .switch__lbl, .navbar-nav a', 'waves-light');
+  Waves.attach('.funds-edit, .btn-funds, .btn-submit, .btn-delete, .nav-tabs li a, .filters-nav li a, .switch__lbl, .navbar-nav a', 'waves-light');
   $(".bar.white").peity("bar", {fill: ['#ffffff'], width: 80, height: 60,});
   $(".bar.success").peity("bar", {fill: ['#90459d'], width: 80, height: 60,});
   $(".bar.danger").peity("bar", {fill: ['#ed6981'], width: 80, height: 60,});

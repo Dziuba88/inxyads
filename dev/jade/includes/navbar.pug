@@ -24,8 +24,8 @@ nav.navbar
           span 122.3
           span.caret
         ul.dropdown-menu
-          li: a(href='#') <i class="fa fa-plus-square"></i> Пополнить
-          li: a(href='#') <i class="fa fa-minus-square"></i> Вывести
+          li(class=active__menu == 'Пополнить счёт' ? 'active' : ''): a(href='refill-funds.html') <i class="fa fa-plus-square"></i> Пополнить
+          li(class=active__menu == 'Вывести средства' ? 'active' : ''): a(href='withdraw-funds.html') <i class="fa fa-minus-square"></i> Вывести
       li.dropdown.user-menu
         a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
           span.user-menu__pic: img(src="https://unsplash.it/100?image=1005", alt="")

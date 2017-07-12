@@ -1,0 +1,132 @@
+- site_title = "InxyADS";
+- active__menu = 'Вывести средства';
+- page_title = 'Вывести средства';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+          
+      .container
+        form(action="" method="post").compain-edit
+          .row
+            .col.sm-8
+              h1 Площадка: Ilye баннеры
+                small Изменить статус
+                  .switch
+                    input.switch__ctrl(type='checkbox' id='status')
+                    label.switch__lbl(for='status')
+            .col.sm-4.text-right
+              .well
+                .stats-graph <span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span>
+                span <strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек
+
+          .row
+            .col.sm-6
+              fieldset.compain-edit__main
+                .input-row.default
+                  label(for="site-name") Название площадки
+                  input(type="text" required)#site-name
+                .input-row.default
+                  label(for="site-page") Рекламируем страницу
+                  input(type="url" required)#site-page
+            .col.sm-6
+              fieldset.compain-edit__payment
+                h2 Добавьте код на сайт
+                p Код можно располагать в любом месте HTML-кода, желательно ближе к началу страницы. После изменения параметров кода, его необходимо обновлять на всех страницах сайта.
+                .input-row
+                  label Формат
+                  span.radio.default
+                    input(type="radio" checked name="group1")#rad1
+                    label(for="rad1")
+                       span Асинхронный код 
+                       span.popover (?)
+                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
+                  span.radio.default
+                    input(type="radio" name="group1")#rad2
+                    label(for="rad2")
+                       span Синхронный код  
+                       span.popover (?)
+                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
+                  span.radio.default
+                    input(type="radio" name="group1")#rad3
+                    label(for="rad3")
+                       span Direct URL 
+                       span.popover (?)
+                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
+                .input-row.default
+                  label(for='site-code') код
+                  textarea#site-code(name="code", cols="30", rows="10", readonly, onclick="this.focus();this.select()").
+                    &lt;!-- Yandex.Metrika counter --&gt;
+                    &lt;script type="text/javascript"&gt;
+                    &nbsp; &nbsp; (function (d, w, c) {
+                    &nbsp; &nbsp; &nbsp; &nbsp; (w[c] = w[c] || []).push(function() {
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; try {
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; w.yaCounter10909933 = new Ya.Metrika({
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id:10909933,
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clickmap:true,
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trackLinks:true,
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accurateTrackBounce:true,
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ut:"noindex"
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } catch(e) { }
+                    &nbsp; &nbsp; &nbsp; &nbsp; });
+
+                    &nbsp; &nbsp; &nbsp; &nbsp; var n = d.getElementsByTagName("script")[0],
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s = d.createElement("script"),
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f = function () { n.parentNode.insertBefore(s, n); };
+                    &nbsp; &nbsp; &nbsp; &nbsp; s.type = "text/javascript";
+                    &nbsp; &nbsp; &nbsp; &nbsp; s.async = true;
+                    &nbsp; &nbsp; &nbsp; &nbsp; s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+                    &nbsp; &nbsp; &nbsp; &nbsp; if (w.opera == "[object Opera]") {
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d.addEventListener("DOMContentLoaded", f, false);
+                    &nbsp; &nbsp; &nbsp; &nbsp; } else { f(); }
+                    &nbsp; &nbsp; })(document, window, "yandex_metrika_callbacks");
+                    &lt;/script&gt;
+                    &lt;noscript&gt;&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/10909933?ut=noindex" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;&lt;/noscript&gt;
+                    &lt;!-- /Yandex.Metrika counter --&gt;
+                .input-row
+                  button.btn-submit 
+                    i.fa.fa-copy 
+                    span Скопировать код
+
+
+          .compain-edit_controls
+            button.btn-delete 
+              i.fa.fa-trash-o
+              span Удалить сайт
+            button(type="submit").btn-submit 
+              i.fa.fa-save 
+              span Сохранить
+
+
+
+
+
+
+
+
+
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

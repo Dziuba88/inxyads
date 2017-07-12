@@ -1,0 +1,145 @@
+- site_title = "InxyADS";
+- active__menu = 'Пополнить счёт';
+- page_title = 'Пополнить счёт';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+          
+      .container
+        .row
+          .col.lg-7.md-6
+            .funds-payment
+              h2.filters-header Пополнить счет через:
+              .row
+                .col.sm-3
+                  a(href="").funds-payment_btn PayPal
+                .col.sm-3
+                  a(href="").funds-payment_btn Skrill
+                .col.sm-3
+                  a(href="").funds-payment_btn Paxum
+                .col.sm-3
+                  a(href="").funds-payment_btn Payoneer
+                .col.sm-3
+                  a(href="").funds-payment_btn Payza
+                .col.sm-3
+                  a(href="").funds-payment_btn Epayments
+                .col.sm-3
+                  a(href="").funds-payment_btn eCoin
+                .col.sm-3
+                  a(href="").funds-payment_btn Webmoney
+          .col.lg-5.md-6
+            h2.filters-header Ваши счета
+
+            .funds
+              .funds-val € 56,4
+              .funds-info
+                span Название счёта
+                small  Хватит на 12 дней
+              a(href="withdraw-funds.html").funds-action
+                i.fa.fa-arrow-circle-down 
+                span Вывести
+              .funds-edit: i.fa.fa-pencil
+            .funds
+              .funds-val $ 9999,99
+              .funds-info
+                span Название счёта
+                small  Хватит на 12 дней
+              a(href="withdraw-funds.html").funds-action
+                i.fa.fa-arrow-circle-down 
+                span Вывести
+              .funds-edit: i.fa.fa-pencil
+              
+
+            button.btn-funds 
+              i.fa.fa-plus-square 
+              span Добавить счёт
+
+      .container
+        h2.filters-header История платежей 
+          small за всё время
+          .dropdown
+            svg.dropdown-mobile(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#menu_icon")
+            ul.dropdown-menu(aria-labelledby='dLabel')
+              li.active: a(href="#", title="Всё время") Всё время
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Вчера") Вчера
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Неделя") Неделя
+              li: a(href="#", title="Месяц") Месяц
+              li: a(href="#", title="Квартал") Квартал
+              li: a(href="#", title="Год") Год
+        .filters
+          ul.filters-nav
+            li.active: a(href="#", title="Всё время") Всё время
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Вчера") Вчера
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Неделя") Неделя
+            li: a(href="#", title="Месяц") Месяц
+            li: a(href="#", title="Квартал") Квартал
+            li: a(href="#", title="Год") Год
+            li
+              form.filters-custom(action="")
+                input(type="text" id="daterange")
+                i.fa.fa-calendar
+        .responsive-vertical: table.material-table.hover.bordered.striped.funds-table
+          thead
+            tr
+              th Дата
+              th Тип  
+              th Статус  
+              th Документ  
+              th Сумма  
+              th Остаток на счету
+          tbody
+            - for (var x = 1; x < 5; x++)
+              tr
+                td(data-title='Дата') 12.06.2017, 10:36
+                td(data-title='Тип') Пополнение счёта
+
+                td(data-title='Статус'): span.danger Не выполнен
+                td(data-title='Документ') 
+
+                td(data-title='Сумма'): strong.success +325,42 $
+
+                td(data-title='Остаток на счету'): strong 2 553,78 $
+              tr
+                td(data-title='Дата') 12.06.2017, 10:36
+                td(data-title='Тип') Пополнение счёта
+
+                td(data-title='Статус'): span.success Выполнен
+                td(data-title='Документ'): a(href="img/header.jpg" download) Invoice 346632
+
+                td(data-title='Сумма'): strong.success +325,42 $
+
+                td(data-title='Остаток на счету'): strong 2 553,78 $
+
+
+
+
+
+
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

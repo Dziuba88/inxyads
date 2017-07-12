@@ -287,6 +287,15 @@
   }
 
 
+  .funds-table {
+    thead > tr > th, tbody > tr > td {
+      &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+        text-align: center;
+      }
+    }
+  }
+
+
 
 
 
