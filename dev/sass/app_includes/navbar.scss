@@ -162,14 +162,15 @@ svg.navbar-toggle {
 
         li a {
           color: $base-color;
-          &:hover {color: $primary-color;}
-
+          
           .fa {
             opacity: .75;
             width: 1.5em;
             text-align: left !important;
           }
         }
+
+        li.active a, li a:hover {color: #fff;background-color: $base-color;}
 
       }
 

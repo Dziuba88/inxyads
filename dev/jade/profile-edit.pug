@@ -1,0 +1,96 @@
+- site_title = "InxyADS";
+- active__menu = 'Профиль';
+- page_title = 'Профиль';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+          
+      .container
+        form(action="" method="post").profile-edit
+          .row
+            .col.sm-6
+              fieldset.edit__main
+                .input-row.default
+                  label ID
+                  span 4574577
+                .input-row.default
+                  label(for="profile-mail") Email
+                  input(type="email" value="loremipsum@gmail.com" required readonly)#profile-mail
+                  a.input-row-edit Изменить email
+                .input-row.default
+                  label(for="profile-password") Пароль
+                  input(type="password" value="password" required readonly)#profile-password
+                  a.input-row-edit Изменить пароль
+            .col.sm-6
+              fieldset.edit__payment
+                h2 Платёжная информация
+                p Эта информация нужна для получения платежей. Мы не передаём данные третьим лицам.
+                .input-row
+                  label Вы
+                  ul.nav.nav-tabs
+                    li.active: a(href='#fiz', role='tab', data-toggle='tab') Физ. лицо
+                    li: a(href='#jur', role='tab', data-toggle='tab') Организация
+                  // Tab panes
+                  .tab-content
+                    #fiz.tab-pane.active(role='tabpanel')
+                      .input-row.default
+                        label(for='profile-fio') ФИО
+                        input(type="text" value="Петрынин Фёдор Афансьевич" required)#profile-fio
+                      .input-row.default
+                        label(for='profile-tel') Телефон
+                        input(type="tel" value="+7 920 553 53 67" required)#profile-tel
+                      .input-row.default
+                        label(for='profile-country') Страна
+                        input(type="text" value="Россия" required)#profile-country
+                      .input-row.default
+                        label(for='profile-city') Город
+                        input(type="text" value="Великие Луки" required)#profile-city
+                      .input-row.default
+                        label(for='profile-index') Индекс
+                        input(type="text" value="Великие Луки" required)#profile-index
+                      .input-row.default
+                        label(for='profile-adress') Адрес
+                        input(type="text" value="ул. Ленина д. 56, кв. 3" required)#profile-adress
+                      a(href="profile-docs.html").btn-funds 
+                        i.fa.fa-plus-square 
+                        span Загрузите документы
+                          small , чтобы получать платежи
+
+
+          .compain-edit_controls
+            button(type="submit").btn-submit 
+              i.fa.fa-save 
+              span Сохранить
+
+
+
+
+
+
+
+
+
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

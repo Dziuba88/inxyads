@@ -19,7 +19,7 @@ nav.navbar
           sup 5
       li.dropdown.user-finances
         a.dropdown-toggle(data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-          span Balance  
+          //span Balance  
           i.fa.fa-usd  
           span 122.3
           span.caret
@@ -32,8 +32,8 @@ nav.navbar
           span.user-menu__name Lorem Ipsum
           span.caret
         ul.dropdown-menu
-          li: a(href='#') <i class="fa fa-user"></i> Профиль
-          li: a(href='#') <i class="fa fa-id-card"></i> Документы
+          li(class=active__menu == 'Профиль' ? 'active' : ''): a(href='profile-edit.html') <i class="fa fa-user"></i> Профиль
+          li(class=active__menu == 'Документы' ? 'active' : ''): a(href='profile-docs.html') <i class="fa fa-id-card"></i> Документы
           li: a(href='#') <i class="fa fa-sign-out"></i> Выход
       li.lang-menu
         a(href="")

@@ -27,7 +27,8 @@
         </ul>
         <ul class="nav navbar-nav right">
           <li class="icons-menu"><a class="news" href=""><i class="fa fa-bullhorn"> </i><sup>3</sup></a><a class="messages" href=""><i class="fa fa-comments-o"> </i><sup>5</sup></a></li>
-          <li class="dropdown user-finances"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>Balance  </span><i class="fa fa-usd"> </i><span>122.3</span><span class="caret"></span></a>
+          <li class="dropdown user-finances"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <!--span Balance  --><i class="fa fa-usd"> </i><span>122.3</span><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="refill-funds.html"><i class="fa fa-plus-square"></i> Пополнить</a></li>
               <li class="active"><a href="withdraw-funds.html"><i class="fa fa-minus-square"></i> Вывести</a></li>
@@ -35,8 +36,8 @@
           </li>
           <li class="dropdown user-menu"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="user-menu__pic"><img src="https://unsplash.it/100?image=1005" alt=""></span><span class="user-menu__name">Lorem Ipsum</span><span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-user"></i> Профиль</a></li>
-              <li><a href="#"><i class="fa fa-id-card"></i> Документы</a></li>
+              <li><a href="profile-edit.html"><i class="fa fa-user"></i> Профиль</a></li>
+              <li><a href="profile-docs.html"><i class="fa fa-id-card"></i> Документы</a></li>
               <li><a href="#"><i class="fa fa-sign-out"></i> Выход</a></li>
             </ul>
           </li>
@@ -57,90 +58,204 @@
         </ul>
       </section>
       <div class="container">
-        <form class="compain-edit" action="" method="post">
-          <div class="row">
-            <div class="col sm-8">
-              <h1>Площадка: Ilye баннеры<small>Изменить статус
-                  <div class="switch">
-                    <input class="switch__ctrl" type="checkbox" id="status">
-                    <label class="switch__lbl" for="status"></label>
-                  </div></small></h1>
-            </div>
-            <div class="col sm-4 text-right">
-              <div class="well">
-                <div class="stats-graph"><span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span></div><span><strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек</span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col sm-6">
-              <fieldset class="compain-edit__main">
-                <div class="input-row default">
-                  <label for="site-name">Название площадки</label>
-                  <input type="text" required id="site-name">
+        <div class="row">
+          <div class="col lg-7 md-6">
+            <form class="withdraw-form" action="" method="post">
+              <fieldset>
+                <div class="row">
+                  <div class="col sm-4 md-3">
+                    <div class="input-row default">
+                      <label>Вывести</label>
+                      <div class="select-drop">
+                        <input class="toggle" type="url" value="Сумма" required data-toggle_select readonly>
+                        <ul>
+                          <li class="active"><a data-label="Сумма">Сумма</a></li>
+                          <li><a data-label="% от суммы на счёте">% от суммы на счёте</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col sm-4 md-3">
+                    <div class="input-row default">
+                      <label>Сумма</label>
+                      <input type="tel" required>
+                    </div>
+                  </div>
                 </div>
-                <div class="input-row default">
-                  <label for="site-page">Рекламируем страницу</label>
-                  <input type="url" required id="site-page">
+                <div class="row">
+                  <div class="col sm-8 md-6">
+                    <div class="input-row default">
+                      <label>Со счёта</label>
+                      <div class="select-drop">
+                        <input class="toggle" type="url" value="Выбрать счет" required data-toggle_select readonly>
+                        <ul>
+                          <li class="active"><a data-label="Выбрать счет">Выбрать счет</a></li>
+                          <li><a data-label="$ 122,3 — Название счёта">$ 122,3 — Название счёта</a></li>
+                          <li><a data-label="$ 122,3 — Название счёта">€ 56,4 — Название счёта</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col sm-8 md-6">
+                    <div class="input-row default">
+                      <label>Куда вывести</label>
+                      <div class="select-drop">
+                        <input class="toggle" type="url" value="Куда вывести" required data-toggle_select readonly>
+                        <ul>
+                          <li class="active"><a data-label="Куда вывести">Куда вывести</a></li>
+                          <li><a data-label="PayPal">PayPal</a></li>
+                          <li><a data-label="Skrill">Skrill</a></li>
+                          <li><a data-label="Paxum">Paxum</a></li>
+                          <li><a data-label="Payoneer">Payoneer</a></li>
+                          <li><a data-label="Payza">Payza</a></li>
+                          <li><a data-label="Epayments">Epayments</a></li>
+                          <li><a data-label="eCoin">eCoin</a></li>
+                          <li><a data-label="Webmoney">Webmoney</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </fieldset>
-            </div>
-            <div class="col sm-6">
-              <fieldset class="compain-edit__payment">
-                <h2>Добавьте код на сайт</h2>
-                <p>Код можно располагать в любом месте HTML-кода, желательно ближе к началу страницы. После изменения параметров кода, его необходимо обновлять на всех страницах сайта.</p>
-                <div class="input-row">
-                  <label>Формат</label><span class="radio default">
-                    <input type="radio" checked name="group1" id="rad1">
-                    <label for="rad1"><span>Асинхронный код </span><span class="popover">(?)<span class="popover-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?</span></span></label></span><span class="radio default">
-                    <input type="radio" name="group1" id="rad2">
-                    <label for="rad2"><span>Синхронный код  </span><span class="popover">(?)<span class="popover-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?</span></span></label></span><span class="radio default">
-                    <input type="radio" name="group1" id="rad3">
-                    <label for="rad3"><span>Direct URL </span><span class="popover">(?)<span class="popover-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?</span></span></label></span>
-                </div>
-                <div class="input-row default">
-                  <label for="site-code">код</label>
-                  <textarea id="site-code" name="code" cols="30" rows="10" readonly onclick="this.focus();this.select()">&lt;!-- Yandex.Metrika counter --&gt;
-&lt;script type="text/javascript"&gt;
-&nbsp; &nbsp; (function (d, w, c) {
-&nbsp; &nbsp; &nbsp; &nbsp; (w[c] = w[c] || []).push(function() {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; try {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; w.yaCounter10909933 = new Ya.Metrika({
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id:10909933,
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clickmap:true,
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trackLinks:true,
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accurateTrackBounce:true,
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ut:"noindex"
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } catch(e) { }
-&nbsp; &nbsp; &nbsp; &nbsp; });
-
-&nbsp; &nbsp; &nbsp; &nbsp; var n = d.getElementsByTagName("script")[0],
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s = d.createElement("script"),
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f = function () { n.parentNode.insertBefore(s, n); };
-&nbsp; &nbsp; &nbsp; &nbsp; s.type = "text/javascript";
-&nbsp; &nbsp; &nbsp; &nbsp; s.async = true;
-&nbsp; &nbsp; &nbsp; &nbsp; s.src = "https://mc.yandex.ru/metrika/watch.js";
-
-&nbsp; &nbsp; &nbsp; &nbsp; if (w.opera == "[object Opera]") {
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d.addEventListener("DOMContentLoaded", f, false);
-&nbsp; &nbsp; &nbsp; &nbsp; } else { f(); }
-&nbsp; &nbsp; })(document, window, "yandex_metrika_callbacks");
-&lt;/script&gt;
-&lt;noscript&gt;&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/10909933?ut=noindex" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;&lt;/noscript&gt;
-&lt;!-- /Yandex.Metrika counter --&gt;</textarea>
-                </div>
-                <div class="input-row">
-                  <button class="btn-submit"> <i class="fa fa-copy"> </i><span>Скопировать код</span></button>
+                <div class="row middle text-center">
+                  <div class="col sm-8 md-6">
+                    <p>с вами свяжется менеджер и уточнит реквизиты</p>
+                    <button class="btn-submit" type="submit"><i class="fa fa-arrow-circle-down "> </i><span>Вывести средства</span></button></button>
+                  </div>
                 </div>
               </fieldset>
+            </form>
+          </div>
+          <div class="col lg-5 md-6">
+            <h2 class="filters-header">Ваши счета</h2>
+            <div class="funds">
+              <div class="funds-val">€ 56,4</div>
+              <div class="funds-info"><span>Название счёта</span><small> Хватит на 12 дней</small></div><a class="funds-action" href="refill-funds.html"><i class="fa fa-arrow-circle-up"> </i><span>Пополнить</span></a>
+              <div class="funds-edit"><i class="fa fa-pencil"></i></div>
             </div>
+            <div class="funds">
+              <div class="funds-val">$ 9999,99</div>
+              <div class="funds-info"><span>Название счёта</span><small> Хватит на 12 дней</small></div><a class="funds-action" href="refill-funds.html"><i class="fa fa-arrow-circle-up"> </i><span>Пополнить</span></a>
+              <div class="funds-edit"><i class="fa fa-pencil"></i></div>
+            </div>
+            <button class="btn-funds"> <i class="fa fa-plus-square"> </i><span>Добавить счёт</span></button>
           </div>
-          <div class="compain-edit_controls">
-            <button class="btn-delete"> <i class="fa fa-trash-o"></i><span>Удалить сайт</span></button>
-            <button class="btn-submit" type="submit"> <i class="fa fa-save"> </i><span>Сохранить</span></button>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="filters-header">История платежей <small>за всё время</small>
+          <div class="dropdown">
+            <svg class="dropdown-mobile" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <use xlink:href="#menu_icon"></use>
+            </svg>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+              <li><a href="#" title="Сегодня">Сегодня</a></li>
+              <li><a href="#" title="Вчера">Вчера</a></li>
+              <li><a href="#" title="Сегодня">Сегодня</a></li>
+              <li><a href="#" title="Неделя">Неделя</a></li>
+              <li><a href="#" title="Месяц">Месяц</a></li>
+              <li><a href="#" title="Квартал">Квартал</a></li>
+              <li><a href="#" title="Год">Год</a></li>
+            </ul>
           </div>
-        </form>
+        </h2>
+        <div class="filters">
+          <ul class="filters-nav">
+            <li class="active"><a href="#" title="Всё время">Всё время</a></li>
+            <li><a href="#" title="Сегодня">Сегодня</a></li>
+            <li><a href="#" title="Вчера">Вчера</a></li>
+            <li><a href="#" title="Сегодня">Сегодня</a></li>
+            <li><a href="#" title="Неделя">Неделя</a></li>
+            <li><a href="#" title="Месяц">Месяц</a></li>
+            <li><a href="#" title="Квартал">Квартал</a></li>
+            <li><a href="#" title="Год">Год</a></li>
+            <li>
+              <form class="filters-custom" action="">
+                <input type="text" id="daterange"><i class="fa fa-calendar"></i>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="responsive-vertical">
+          <table class="material-table hover bordered striped funds-table">
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Тип  </th>
+                <th>Статус  </th>
+                <th>Документ  </th>
+                <th>Сумма  </th>
+                <th>Остаток на счету</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="danger">Не выполнен</span></td>
+                <td data-title="Документ"> </td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="success">Выполнен</span></td>
+                <td data-title="Документ"><a href="img/header.jpg" download>Invoice 346632</a></td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="danger">Не выполнен</span></td>
+                <td data-title="Документ"> </td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="success">Выполнен</span></td>
+                <td data-title="Документ"><a href="img/header.jpg" download>Invoice 346632</a></td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="danger">Не выполнен</span></td>
+                <td data-title="Документ"> </td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="success">Выполнен</span></td>
+                <td data-title="Документ"><a href="img/header.jpg" download>Invoice 346632</a></td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="danger">Не выполнен</span></td>
+                <td data-title="Документ"> </td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+              <tr>
+                <td data-title="Дата">12.06.2017, 10:36</td>
+                <td data-title="Тип">Пополнение счёта</td>
+                <td data-title="Статус"><span class="success">Выполнен</span></td>
+                <td data-title="Документ"><a href="img/header.jpg" download>Invoice 346632</a></td>
+                <td data-title="Сумма"><strong class="success">+325,42 $</strong></td>
+                <td data-title="Остаток на счету"><strong>2 553,78 $</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <footer class="inxy__footer">

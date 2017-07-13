@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InxyADS | Документы</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/app.min.css">
+  </head>
+  <body class="loading">
+    <div class="inxy-preloader">
+      <div class="inxy-preloader__circle"></div>
+    </div>
+    <nav class="navbar">
+      <div class="navbar-header"><a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="InxyADS"></a>
+        <svg class="navbar-toggle" type="button">
+          <use xlink:href="#menu_icon"></use>
+        </svg>
+      </div>
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav">
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="compaings.html">Рекламные кампании</a></li>
+              <li><a href="publisher.html">Площадки</a></li>
+        </ul>
+        <ul class="nav navbar-nav right">
+          <li class="icons-menu"><a class="news" href=""><i class="fa fa-bullhorn"> </i><sup>3</sup></a><a class="messages" href=""><i class="fa fa-comments-o"> </i><sup>5</sup></a></li>
+          <li class="dropdown user-finances"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <!--span Balance  --><i class="fa fa-usd"> </i><span>122.3</span><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="refill-funds.html"><i class="fa fa-plus-square"></i> Пополнить</a></li>
+              <li><a href="withdraw-funds.html"><i class="fa fa-minus-square"></i> Вывести</a></li>
+            </ul>
+          </li>
+          <li class="dropdown user-menu"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="user-menu__pic"><img src="https://unsplash.it/100?image=1005" alt=""></span><span class="user-menu__name">Lorem Ipsum</span><span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="profile-edit.html"><i class="fa fa-user"></i> Профиль</a></li>
+              <li class="active"><a href="profile-docs.html"><i class="fa fa-id-card"></i> Документы</a></li>
+              <li><a href="#"><i class="fa fa-sign-out"></i> Выход</a></li>
+            </ul>
+          </li>
+          <li class="lang-menu"><a href="">
+              <svg>
+                <use xlink:href="#flag_UK"></use>
+              </svg><span class="small-only">English</span></a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse-->
+    </nav>
+    <div class="inxy-page layout-dashboard">
+      <section class="content-header">
+        <h1>Документы</h1>
+        <ul class="breadcrumb">
+          <li><a href=""><i class="fa fa-home"> </i>Dashboard </a></li>
+          <li><span>Документы</span></li>
+        </ul>
+      </section>
+      <div class="container">
+        <form class="profile-edit" action="" method="post">
+          <div class="row">
+            <div class="col sm-6">
+              <fieldset class="edit__payment">
+                <h2>Документ с фотографией</h2>
+                <p>Вы должны подтвердить свою личность. <br>Для этого загрузите фото документов.<br></p>
+                <div class="input-row"><span class="radio default">
+                    <input type="radio" checked name="group1" id="rad1">
+                    <label for="rad1"><span>Водительское удостоверение с двух сторон</span></label></span><span class="radio default">
+                    <input type="radio" checked name="group1" id="rad2">
+                    <label for="rad2"><span>Паспорт — разворот с фото и пропиской</span></label></span></div>
+                <div class="input-row file">
+                  <input type="file" required id="profile-file-1">
+                  <label for="profile-file-1">Загрузить документы</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col sm-6">
+              <fieldset class="edit__payment">
+                <h2>Документ, подтверждающий адрес проживания</h2>
+                <p>Эта информация нужна для получения платежей. <br>Мы не передаём данные третьим лицам.<br></p>
+                <div class="input-row"><span class="radio default">
+                    <input type="radio" checked name="group2" id="rd1">
+                    <label for="rd1"><span>Квитанция за квартплату, электричество или газ.</span></label></span><span class="radio default">
+                    <input type="radio" checked name="group2" id="rd2">
+                    <label for="rd2"><span>Письмо из правительственных структур: налоговой, полиции и пр.</span></label></span><span class="radio default">
+                    <input type="radio" checked name="group2" id="rd3">
+                    <label for="rd3"><span>Квитанция из банка</span></label></span></div>
+                <div class="input-row default">
+                  <label for="profile-country">Страна</label>
+                  <input type="text" value="Россия" required id="profile-country">
+                </div>
+                <div class="input-row file">
+                  <input type="file" required id="profile-file-2">
+                  <label for="profile-file-2">Загрузить документы</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="compain-edit_controls">
+            <button class="btn-submit" type="submit"> <i class="fa fa-save"> </i><span>Сохранить</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer class="inxy__footer">
+      <div class="container"><span>© 2009–2017  </span><a href="#" title="INXY.COM">INXY.COM</a><span> All Rights Reserved.</span></div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <!-- Page Plugins-->
+    <script src="js/plugins/amcharts/amcharts.js"></script>
+    <script src="js/plugins/amcharts/serial.js"></script>
+    <script src="js/plugins/amcharts/themes/light.js"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/plugins/datepicker/moment.min.js"></script>
+    <script src="js/plugins/datepicker/daterangepicker.js"></script>
+    <script src="js/layouts/dashboard.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+- site_title = "InxyADS";
+- active__menu = 'Документы';
+- page_title = 'Документы';
+doctype html
+html(lang="en")
+  include includes/head
+  body.loading
+    .inxy-preloader
+      .inxy-preloader__circle
+    include includes/navbar
+    .inxy-page.layout-dashboard
+      section.content-header
+        h1=page_title
+        ul.breadcrumb
+          li: a(href="")
+            i.fa.fa-home 
+            | Dashboard 
+          li: span=active__menu
+          
+      .container
+        form(action="" method="post").profile-edit
+          .row
+            .col.sm-6
+              fieldset.edit__payment
+                h2 Документ с фотографией
+                p Вы должны подтвердить свою личность. <br>Для этого загрузите фото документов.<br>
+                .input-row
+                  span.radio.default
+                    input(type="radio" checked name="group1")#rad1
+                    label(for="rad1"): span Водительское удостоверение с двух сторон
+                  span.radio.default
+                    input(type="radio" checked name="group1")#rad2
+                    label(for="rad2"): span Паспорт — разворот с фото и пропиской
+
+                .input-row.file
+                  input(type="file" required)#profile-file-1
+                  label(for='profile-file-1') Загрузить документы
+            .col.sm-6
+              fieldset.edit__payment
+                h2 Документ, подтверждающий адрес проживания
+                p Эта информация нужна для получения платежей. <br>Мы не передаём данные третьим лицам.<br>
+                .input-row
+                  span.radio.default
+                    input(type="radio" checked name="group2")#rd1
+                    label(for="rd1"): span Квитанция за квартплату, электричество или газ.
+                  span.radio.default
+                    input(type="radio" checked name="group2")#rd2
+                    label(for="rd2"): span Письмо из правительственных структур: налоговой, полиции и пр.
+                  span.radio.default
+                    input(type="radio" checked name="group2")#rd3
+                    label(for="rd3"): span Квитанция из банка
+                .input-row.default
+                  label(for='profile-country') Страна
+                  input(type="text" value="Россия" required)#profile-country
+                .input-row.file
+                  input(type="file" required)#profile-file-2
+                  label(for='profile-file-2') Загрузить документы
+
+
+          .compain-edit_controls
+            button(type="submit").btn-submit 
+              i.fa.fa-save 
+              span Сохранить
+
+
+
+
+
+
+
+
+
+
+    include includes/footer
+    include includes/scripts
+    // Page Plugins
+    script(src="js/plugins/amcharts/amcharts.js")
+    script(src="js/plugins/amcharts/serial.js")
+    script(src="js/plugins/amcharts/themes/light.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/peity/jquery.peity.min.js")
+    script(src="js/plugins/datepicker/moment.min.js")
+    script(src="js/plugins/datepicker/daterangepicker.js")
+    script(src="js/layouts/dashboard.min.js")

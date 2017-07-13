@@ -18,100 +18,144 @@ html(lang="en")
           li: span=active__menu
           
       .container
-        form(action="" method="post").compain-edit
-          .row
-            .col.sm-8
-              h1 Площадка: Ilye баннеры
-                small Изменить статус
-                  .switch
-                    input.switch__ctrl(type='checkbox' id='status')
-                    label.switch__lbl(for='status')
-            .col.sm-4.text-right
-              .well
-                .stats-graph <span class="bar white">4,3,6,4,5,4,7,3,5,7,3,5,2</span>
-                span <strong>Аудитория</strong><br><strong>2 334</strong> площадок<br><strong>1 280 000</strong> человек
+        .row
+          .col.lg-7.md-6
+            form(action="" method="post").withdraw-form
+              fieldset
+                .row
+                  .col.sm-4.md-3
+                    .input-row.default
+                      label Вывести
+                      .select-drop
+                        input(type="url" value="Сумма" required data-toggle_select readonly).toggle
+                        ul
+                          li.active
+                            a(data-label='Сумма') Сумма
+                          li
+                            a(data-label='% от суммы на счёте') % от суммы на счёте
+                  .col.sm-4.md-3
+                    .input-row.default
+                      label Сумма
+                      input(type="tel" required)
+                .row
+                  .col.sm-8.md-6
+                    .input-row.default
+                      label Со счёта
+                      .select-drop
+                        input(type="url" value="Выбрать счет" required data-toggle_select readonly).toggle
+                        ul
+                          li.active
+                            a(data-label='Выбрать счет') Выбрать счет
+                          li
+                            a(data-label='$ 122,3 — Название счёта') $ 122,3 — Название счёта
+                          li
+                            a(data-label='$ 122,3 — Название счёта') € 56,4 — Название счёта
+                  .col.sm-8.md-6
+                    .input-row.default
+                      label Куда вывести
+                      .select-drop
+                        input(type="url" value="Куда вывести" required data-toggle_select readonly).toggle
+                        ul
+                          li.active: a(data-label='Куда вывести') Куда вывести
+                          li: a(data-label='PayPal') PayPal
+                          li: a(data-label='Skrill') Skrill
+                          li: a(data-label='Paxum') Paxum
+                          li: a(data-label='Payoneer') Payoneer
+                          li: a(data-label='Payza') Payza
+                          li: a(data-label='Epayments') Epayments
+                          li: a(data-label='eCoin') eCoin
+                          li: a(data-label='Webmoney') Webmoney
 
-          .row
-            .col.sm-6
-              fieldset.compain-edit__main
-                .input-row.default
-                  label(for="site-name") Название площадки
-                  input(type="text" required)#site-name
-                .input-row.default
-                  label(for="site-page") Рекламируем страницу
-                  input(type="url" required)#site-page
-            .col.sm-6
-              fieldset.compain-edit__payment
-                h2 Добавьте код на сайт
-                p Код можно располагать в любом месте HTML-кода, желательно ближе к началу страницы. После изменения параметров кода, его необходимо обновлять на всех страницах сайта.
-                .input-row
-                  label Формат
-                  span.radio.default
-                    input(type="radio" checked name="group1")#rad1
-                    label(for="rad1")
-                       span Асинхронный код 
-                       span.popover (?)
-                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
-                  span.radio.default
-                    input(type="radio" name="group1")#rad2
-                    label(for="rad2")
-                       span Синхронный код  
-                       span.popover (?)
-                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
-                  span.radio.default
-                    input(type="radio" name="group1")#rad3
-                    label(for="rad3")
-                       span Direct URL 
-                       span.popover (?)
-                        span.popover-content Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente veritatis a eaque ducimus deleniti, corporis ipsum, aliquam maiores, aut veniam quas earum, perspiciatis consequuntur maxime sunt eveniet! Totam, minima, molestiae?
-                .input-row.default
-                  label(for='site-code') код
-                  textarea#site-code(name="code", cols="30", rows="10", readonly, onclick="this.focus();this.select()").
-                    &lt;!-- Yandex.Metrika counter --&gt;
-                    &lt;script type="text/javascript"&gt;
-                    &nbsp; &nbsp; (function (d, w, c) {
-                    &nbsp; &nbsp; &nbsp; &nbsp; (w[c] = w[c] || []).push(function() {
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; try {
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; w.yaCounter10909933 = new Ya.Metrika({
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id:10909933,
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; clickmap:true,
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; trackLinks:true,
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; accurateTrackBounce:true,
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ut:"noindex"
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } catch(e) { }
-                    &nbsp; &nbsp; &nbsp; &nbsp; });
+                .row.middle.text-center
+                  .col.sm-8.md-6
+                    p с вами свяжется менеджер и уточнит реквизиты
+                    button.btn-submit(type="submit") <i class="fa fa-arrow-circle-down "> </i><span>Вывести средства</span></button>
+          .col.lg-5.md-6
+            h2.filters-header Ваши счета
 
-                    &nbsp; &nbsp; &nbsp; &nbsp; var n = d.getElementsByTagName("script")[0],
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; s = d.createElement("script"),
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; f = function () { n.parentNode.insertBefore(s, n); };
-                    &nbsp; &nbsp; &nbsp; &nbsp; s.type = "text/javascript";
-                    &nbsp; &nbsp; &nbsp; &nbsp; s.async = true;
-                    &nbsp; &nbsp; &nbsp; &nbsp; s.src = "https://mc.yandex.ru/metrika/watch.js";
+            .funds
+              .funds-val € 56,4
+              .funds-info
+                span Название счёта
+                small  Хватит на 12 дней
+              a(href="refill-funds.html").funds-action
+                i.fa.fa-arrow-circle-up 
+                span Пополнить
+              .funds-edit: i.fa.fa-pencil
+            .funds
+              .funds-val $ 9999,99
+              .funds-info
+                span Название счёта
+                small  Хватит на 12 дней
+              a(href="refill-funds.html").funds-action
+                i.fa.fa-arrow-circle-up 
+                span Пополнить
+              .funds-edit: i.fa.fa-pencil
+              
 
-                    &nbsp; &nbsp; &nbsp; &nbsp; if (w.opera == "[object Opera]") {
-                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; d.addEventListener("DOMContentLoaded", f, false);
-                    &nbsp; &nbsp; &nbsp; &nbsp; } else { f(); }
-                    &nbsp; &nbsp; })(document, window, "yandex_metrika_callbacks");
-                    &lt;/script&gt;
-                    &lt;noscript&gt;&lt;div&gt;&lt;img src="https://mc.yandex.ru/watch/10909933?ut=noindex" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;&lt;/noscript&gt;
-                    &lt;!-- /Yandex.Metrika counter --&gt;
-                .input-row
-                  button.btn-submit 
-                    i.fa.fa-copy 
-                    span Скопировать код
+            button.btn-funds 
+              i.fa.fa-plus-square 
+              span Добавить счёт
 
+      .container
+        h2.filters-header История платежей 
+          small за всё время
+          .dropdown
+            svg.dropdown-mobile(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"): use(xlink:href="#menu_icon")
+            ul.dropdown-menu(aria-labelledby='dLabel')
+              li.active: a(href="#", title="Всё время") Всё время
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Вчера") Вчера
+              li: a(href="#", title="Сегодня") Сегодня
+              li: a(href="#", title="Неделя") Неделя
+              li: a(href="#", title="Месяц") Месяц
+              li: a(href="#", title="Квартал") Квартал
+              li: a(href="#", title="Год") Год
+        .filters
+          ul.filters-nav
+            li.active: a(href="#", title="Всё время") Всё время
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Вчера") Вчера
+            li: a(href="#", title="Сегодня") Сегодня
+            li: a(href="#", title="Неделя") Неделя
+            li: a(href="#", title="Месяц") Месяц
+            li: a(href="#", title="Квартал") Квартал
+            li: a(href="#", title="Год") Год
+            li
+              form.filters-custom(action="")
+                input(type="text" id="daterange")
+                i.fa.fa-calendar
+        .responsive-vertical: table.material-table.hover.bordered.striped.funds-table
+          thead
+            tr
+              th Дата
+              th Тип  
+              th Статус  
+              th Документ  
+              th Сумма  
+              th Остаток на счету
+          tbody
+            - for (var x = 1; x < 5; x++)
+              tr
+                td(data-title='Дата') 12.06.2017, 10:36
+                td(data-title='Тип') Пополнение счёта
 
-          .compain-edit_controls
-            button.btn-delete 
-              i.fa.fa-trash-o
-              span Удалить сайт
-            button(type="submit").btn-submit 
-              i.fa.fa-save 
-              span Сохранить
+                td(data-title='Статус'): span.danger Не выполнен
+                td(data-title='Документ') 
 
+                td(data-title='Сумма'): strong.success +325,42 $
 
+                td(data-title='Остаток на счету'): strong 2 553,78 $
+              tr
+                td(data-title='Дата') 12.06.2017, 10:36
+                td(data-title='Тип') Пополнение счёта
 
+                td(data-title='Статус'): span.success Выполнен
+                td(data-title='Документ'): a(href="img/header.jpg" download) Invoice 346632
+
+                td(data-title='Сумма'): strong.success +325,42 $
+
+                td(data-title='Остаток на счету'): strong 2 553,78 $
 
 
 
