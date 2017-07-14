@@ -28,11 +28,62 @@ html(lang="en")
                 .input-row.default
                   label(for="profile-mail") Email
                   input(type="email" value="loremipsum@gmail.com" required readonly)#profile-mail
-                  a.input-row-edit Изменить email
+                  a.input-row-edit
+                    i.fa.fa-pencil 
+                    span  Изменить email 
                 .input-row.default
                   label(for="profile-password") Пароль
                   input(type="password" value="password" required readonly)#profile-password
-                  a.input-row-edit Изменить пароль
+                  a.input-row-edit
+                    i.fa.fa-pencil 
+                    span  Изменить пароль 
+                h3 Загруженые документы
+                .document-row.default
+                  .row.middle
+                    .col.sm-3.md-2: a(href=""): img(src="https://unsplash.it/100?image=1005", alt="")
+                    .col.sm-9.md-10
+                      p.doc-status.success
+                        i.fa.fa-check-square-o
+                        span  Документ проверен и одобрен
+                          small Все данные совпадают.
+                      p.doc-type
+                        i.fa.fa-address-book 
+                        |  Водительское удостоверение с двух сторон
+                      p: a.input-row-edit
+                        span  Удалить 
+                        i.fa.fa-close
+                .document-row.default
+                  .row.middle
+                    .col.sm-3.md-2: a(href=""): img(src="https://unsplash.it/100?image=1005", alt="")
+                    .col.sm-9.md-10
+                      p.doc-status.danger
+                        i.fa.fa-ban
+                        span  Документ не прошел проверку
+                          small Не видно адреса, имя  или адрес не совпадает.
+                      p.doc-type
+                        i.fa.fa-file-text-o 
+                        |  Квитанция из банка
+                      p: a.input-row-edit
+                        span  Удалить 
+                        i.fa.fa-close
+                .document-row.default
+                  .row.middle
+                    .col.sm-3.md-2: a(href=""): img(src="https://unsplash.it/100?image=1005", alt="")
+                    .col.sm-9.md-10
+                      p.doc-status.info
+                        i.fa.fa-asterisk 
+                        span  Документ проверяется
+                          small Проверьте статус позже.
+                      p.doc-type
+                        i.fa.fa-file-text-o 
+                        |  Квитанция из банка
+                      p: a.input-row-edit
+                        span  Удалить 
+                        i.fa.fa-close
+                a(href="profile-docs.html").btn-funds 
+                  i.fa.fa-plus-square 
+                  span Загрузите документы
+                    small , чтобы получать платежи
             .col.sm-6
               fieldset.edit__payment
                 h2 Платёжная информация
@@ -59,14 +110,33 @@ html(lang="en")
                         input(type="text" value="Великие Луки" required)#profile-city
                       .input-row.default
                         label(for='profile-index') Индекс
-                        input(type="text" value="Великие Луки" required)#profile-index
+                        input(type="text" value="123456789" required)#profile-index
                       .input-row.default
                         label(for='profile-adress') Адрес
                         input(type="text" value="ул. Ленина д. 56, кв. 3" required)#profile-adress
-                      a(href="profile-docs.html").btn-funds 
-                        i.fa.fa-plus-square 
-                        span Загрузите документы
-                          small , чтобы получать платежи
+
+                    #jur.tab-pane(role='tabpanel')
+                      .input-row.default
+                        label(for='company-name') Компания
+                        input(type="text" value="ИП Петрынин" required)#company-name
+                      .input-row.default
+                        label(for='company-vat') VAT 
+                        input(type="text" value="5166347899" required)#company-vat
+                      .input-row.default
+                        label(for='company-tel') Телефон
+                        input(type="tel" value="+7 920 553 53 67" required)#company-tel
+                      .input-row.default
+                        label(for='company-country') Страна
+                        input(type="text" value="Россия" required)#company-country
+                      .input-row.default
+                        label(for='company-city') Город
+                        input(type="text" value="Великие Луки" required)#company-city
+                      .input-row.default
+                        label(for='company-index') Индекс
+                        input(type="text" value="123456789" required)#company-index
+                      .input-row.default
+                        label(for='company-adress') Адрес
+                        input(type="text" value="ул. Ленина д. 56, кв. 3" required)#company-adress
 
 
           .compain-edit_controls

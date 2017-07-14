@@ -67,12 +67,43 @@
                 </div>
                 <div class="input-row default">
                   <label for="profile-mail">Email</label>
-                  <input type="email" value="loremipsum@gmail.com" required readonly id="profile-mail"><a class="input-row-edit">Изменить email</a>
+                  <input type="email" value="loremipsum@gmail.com" required readonly id="profile-mail"><a class="input-row-edit"><i class="fa fa-pencil"> </i><span> Изменить email </span></a>
                 </div>
                 <div class="input-row default">
                   <label for="profile-password">Пароль</label>
-                  <input type="password" value="password" required readonly id="profile-password"><a class="input-row-edit">Изменить пароль</a>
+                  <input type="password" value="password" required readonly id="profile-password"><a class="input-row-edit"><i class="fa fa-pencil"> </i><span> Изменить пароль </span></a>
                 </div>
+                <h3>Загруженые документы</h3>
+                <div class="document-row default">
+                  <div class="row middle">
+                    <div class="col sm-3 md-2"><a href=""><img src="https://unsplash.it/100?image=1005" alt=""></a></div>
+                    <div class="col sm-9 md-10">
+                      <p class="doc-status success"><i class="fa fa-check-square-o"></i><span> Документ проверен и одобрен<small>Все данные совпадают.</small></span></p>
+                      <p class="doc-type"><i class="fa fa-address-book"> </i> Водительское удостоверение с двух сторон</p>
+                      <p><a class="input-row-edit"><span> Удалить </span><i class="fa fa-close"></i></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="document-row default">
+                  <div class="row middle">
+                    <div class="col sm-3 md-2"><a href=""><img src="https://unsplash.it/100?image=1005" alt=""></a></div>
+                    <div class="col sm-9 md-10">
+                      <p class="doc-status danger"><i class="fa fa-ban"></i><span> Документ не прошел проверку<small>Не видно адреса, имя  или адрес не совпадает.</small></span></p>
+                      <p class="doc-type"><i class="fa fa-file-text-o"> </i> Квитанция из банка</p>
+                      <p><a class="input-row-edit"><span> Удалить </span><i class="fa fa-close"></i></a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="document-row default">
+                  <div class="row middle">
+                    <div class="col sm-3 md-2"><a href=""><img src="https://unsplash.it/100?image=1005" alt=""></a></div>
+                    <div class="col sm-9 md-10">
+                      <p class="doc-status info"><i class="fa fa-asterisk"> </i><span> Документ проверяется<small>Проверьте статус позже.</small></span></p>
+                      <p class="doc-type"><i class="fa fa-file-text-o"> </i> Квитанция из банка</p>
+                      <p><a class="input-row-edit"><span> Удалить </span><i class="fa fa-close"></i></a></p>
+                    </div>
+                  </div>
+                </div><a class="btn-funds" href="profile-docs.html"> <i class="fa fa-plus-square"> </i><span>Загрузите документы<small>, чтобы получать платежи</small></span></a>
               </fieldset>
             </div>
             <div class="col sm-6">
@@ -106,12 +137,42 @@
                       </div>
                       <div class="input-row default">
                         <label for="profile-index">Индекс</label>
-                        <input type="text" value="Великие Луки" required id="profile-index">
+                        <input type="text" value="123456789" required id="profile-index">
                       </div>
                       <div class="input-row default">
                         <label for="profile-adress">Адрес</label>
                         <input type="text" value="ул. Ленина д. 56, кв. 3" required id="profile-adress">
-                      </div><a class="btn-funds" href="profile-docs.html"> <i class="fa fa-plus-square"> </i><span>Загрузите документы<small>, чтобы получать платежи</small></span></a>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="jur" role="tabpanel">
+                      <div class="input-row default">
+                        <label for="company-name">Компания</label>
+                        <input type="text" value="ИП Петрынин" required id="company-name">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-vat">VAT </label>
+                        <input type="text" value="5166347899" required id="company-vat">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-tel">Телефон</label>
+                        <input type="tel" value="+7 920 553 53 67" required id="company-tel">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-country">Страна</label>
+                        <input type="text" value="Россия" required id="company-country">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-city">Город</label>
+                        <input type="text" value="Великие Луки" required id="company-city">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-index">Индекс</label>
+                        <input type="text" value="123456789" required id="company-index">
+                      </div>
+                      <div class="input-row default">
+                        <label for="company-adress">Адрес</label>
+                        <input type="text" value="ул. Ленина д. 56, кв. 3" required id="company-adress">
+                      </div>
                     </div>
                   </div>
                 </div>

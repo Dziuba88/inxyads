@@ -250,6 +250,7 @@ a {
 	@extend .transition;
 	text-decoration: none;
 	color: $primary-color;
+	cursor: pointer;
 
 	&:hover {color: $accent-color;}
 }
@@ -262,8 +263,9 @@ a {
 	display: none !important;
 }
 
-.success {color: $success-color;}
-.danger {color: $danger-color;}
+.success {color: $success-color !important;}
+.danger {color: $danger-color !important;}
+.info {color: $secondary-color !important;}
 
 
 .inxy__footer {
